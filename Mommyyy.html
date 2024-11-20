@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mommy!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #fff0f5; /* Light pink background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #ff1493; /* Deep pink */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 0;
+            z-index: 1;
+        }
+
+        .hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #ff69b4;
+            transform: rotate(-45deg); /* Rotate to make it face upwards */
+            animation: float 5s ease-in-out infinite;
+            opacity: 0.7;
+        }
+
+        .heart:before, .heart:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ff69b4;
+        }
+
+        .heart:before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 25px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: rotate(-45deg) translateY(0) scale(1); /* Upward direction */
+            }
+            50% {
+                transform: rotate(-45deg) translateY(-100px) scale(1.5);
+            }
+            100% {
+                transform: rotate(-45deg) translateY(0) scale(1);
+            }
+        }
+
+        /* Styling for the Polaroid-style pictures */
+        .photo-album {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            z-index: 1;
+        }
+
+        .polaroid {
+            position: absolute;
+            width: 200px;
+            height: 250px;
+            background-color: #fff;
+            border: 10px solid #ff69b4; /* Polaroid border color */
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            opacity: 0.9;
+        }
+
+        .polaroid img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Happy Birthday Mommy!</h1>
+    
+    <div class="photo-album" id="photoAlbum">
+        <!-- Fixed positions with random rotation -->
+        <div class="polaroid" style="top: 25%; left: 10%; transform: rotate(-5deg);">
+            <img src="file:///Users/marionncharlesgarcia/Mommy/images/mommy1.jpg" alt="Birthday moment 1" />
+        </div>
+        <div class="polaroid" style="top: 40%; left: 50%; transform: rotate(8deg);">
+            <img src="file:///Users/marionncharlesgarcia/Mommy/images/mommy2.jpg" alt="Birthday moment 2" />
+        </div>
+        <div class="polaroid" style="top: 60%; left: 20%; transform: rotate(-10deg);">
+            <img src="file:///Users/marionncharlesgarcia/Mommy/images/mommy3.jpg" alt="Birthday moment 3" />
+        </div>
+        <div class="polaroid" style="top: 55%; left: 80%; transform: rotate(12deg);">
+            <img src="file:///Users/marionncharlesgarcia/Mommy/images/mommy4.jpg" alt="Birthday moment 4" />
+        </div>
+        <div class="polaroid" style="top: 10%; left: 70%; transform: rotate(3deg);">
+            <img src="file:///Users/marionncharlesgarcia/Mommy/images/mommy5.jpg" alt="Birthday moment 5" />
+        </div>
+        <div class="polaroid" style="top: 75%; left: 20%; transform: rotate(-15deg);">
+            <img src="file:///Users/marionncharlesgarcia/Mommy/images/mommy6.jpg" alt="Birthday moment 6" />
+        </div>
+    </div>
+
+    <div class="hearts">
+        <!-- Floating hearts, now facing upward -->
+        <div class="heart upward" style="top: 10%; left: 10%; animation-delay: 0s;"></div>
+        <div class="heart upward" style="top: 30%; left: 25%; animation-delay: 1s;"></div>
+        <div class="heart upward" style="top: 50%; left: 50%; animation-delay: 2s;"></div>
+        <div class="heart upward" style="top: 70%; left: 60%; animation-delay: 3s;"></div>
+        <div class="heart upward" style="top: 20%; left: 70%; animation-delay: 4s;"></div>
+        <div class="heart upward" style="top: 80%; left: 15%; animation-delay: 5s;"></div>
+        <div class="heart upward" style="top: 40%; left: 80%; animation-delay: 6s;"></div>
+        <div class="heart upward" style="top: 60%; left: 35%; animation-delay: 7s;"></div>
+        <div class="heart upward" style="top: 10%; left: 80%; animation-delay: 8s;"></div>
+        <div class="heart upward" style="top: 50%; left: 10%; animation-delay: 9s;"></div>
+    </div>
+
+</body>
+</html>
